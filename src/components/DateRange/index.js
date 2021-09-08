@@ -123,6 +123,14 @@ class DateRange extends Component {
     const color = ranges[focusedRange[0]]?.color || rangeColors[focusedRange[0]] || color;
     this.setState({ preview: { ...val.range, color } });
   };
+
+  handleHourChange = hour => {
+    const iR = [...this.props.ranges];
+    iR[0] = hour;
+    this.props.onChange({
+      selection: iR[0],
+    });
+  };
   render() {
     return (
       <Calendar
@@ -134,6 +142,7 @@ class DateRange extends Component {
         }}
         {...this.props}
         displayMode="dateRange"
+        handleHourChange={this.handleHourChange}
         className={classnames(this.styles.dateRangeWrapper, this.props.className)}
         onChange={this.setSelection}
         updateRange={val => this.setSelection(val, false)}
@@ -157,6 +166,8 @@ DateRange.defaultProps = {
 DateRange.propTypes = {
   ...Calendar.propTypes,
   onChange: PropTypes.func,
+  startHour: PropTypes.string,
+  endHour: PropTypes.string,
   onRangeFocusChange: PropTypes.func,
   className: PropTypes.string,
   ranges: PropTypes.arrayOf(rangeShape),

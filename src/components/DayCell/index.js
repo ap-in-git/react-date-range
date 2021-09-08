@@ -185,6 +185,8 @@ DayCell.defaultProps = {};
 export const rangeShape = PropTypes.shape({
   startDate: PropTypes.object,
   endDate: PropTypes.object,
+  startHour: PropTypes.string,
+  endHour: PropTypes.string,
   color: PropTypes.string,
   key: PropTypes.string,
   autoFocus: PropTypes.bool,

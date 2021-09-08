@@ -98,6 +98,7 @@ class DefinedRange extends Component {
             );
           })}
         </div>
+        {footerContent}
         <div className={styles.inputRanges}>
           {inputRanges.map((rangeOption, i) => (
             <InputRangeField
@@ -111,7 +112,6 @@ class DefinedRange extends Component {
             />
           ))}
         </div>
-        {footerContent}
       </div>
     );
   }
@@ -135,6 +135,7 @@ DefinedRange.defaultProps = {
   inputRanges: defaultInputRanges,
   staticRanges: defaultStaticRanges,
   ranges: [],
+  timezone: 'GMT',
   rangeColors: ['#3d91ff', '#3ecf8e', '#fed14c'],
   focusedRange: [0, 0],
 };

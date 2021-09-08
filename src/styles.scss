@@ -4,3 +4,6 @@
 @import 'components/DayCell/index.scss';
 @import 'components/DateRangePicker/index.scss';
 @import 'components/DefinedRange/index.scss';
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}

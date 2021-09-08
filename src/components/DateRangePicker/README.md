@@ -10,17 +10,23 @@ const [state, setState] = useState([
   {
     startDate: new Date(),
     endDate: addDays(new Date(), 7),
-    key: 'selection'
+    startHour:'00:00',
+    endHour:'23:59',  
+    key: 'selection',
   }
 ]);
 
+const [timezoneName,setTimezoneName] = useState("GMT");
+
 <DateRangePicker
-  onChange={item => setState([item.selection])}
+  onChange={item => (setState([item.selection]))}
   showSelectionPreview={true}
   moveRangeOnFirstSelection={false}
   months={2}
   ranges={state}
   direction="horizontal"
+  timezone={timezoneName}
+  onTimezoneChange={item => setTimezoneName(item)}
 />;
 ```
 

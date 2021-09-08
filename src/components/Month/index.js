@@ -59,11 +59,11 @@ class Month extends PureComponent {
     const showPreview = this.props.showPreview && !drag.disablePreview;
     return (
       <div className={styles.month} style={this.props.style}>
-        {this.props.showMonthName ? (
-          <div className={styles.monthName}>
-            {format(this.props.month, this.props.monthDisplayFormat, this.props.dateOptions)}
-          </div>
-        ) : null}
+        {/*{this.props.showMonthName ? (*/}
+        {/*  <div className={styles.monthName}>*/}
+        {/*    {format(this.props.month, this.props.monthDisplayFormat, this.props.dateOptions)}*/}
+        {/*  </div>*/}
+        {/*) : null}*/}
         {this.props.showWeekDays &&
           renderWeekdays(styles, this.props.dateOptions, this.props.weekdayDisplayFormat)}
         <div className={styles.days} onMouseLeave={this.props.onMouseLeave}>
