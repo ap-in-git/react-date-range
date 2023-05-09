@@ -35,7 +35,9 @@
     "url": "http://github.com/hypeserver/react-date-range/issues"
   },
   "browserslist": [
-    "defaults"
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
   ],
   "dependencies": {
     "classnames": "^2.2.6",
