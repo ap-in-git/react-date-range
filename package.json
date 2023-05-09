@@ -11,7 +11,7 @@
     "lint": "eslint 'src/**/*.js'",
     "test": "jest",
     "preversion": "yarn clear & yarn build",
-    "prepare": "npm run build"
+    "prepare": "yarn build:css & yarn build:js"
   },
   "keywords": [
     "react",
